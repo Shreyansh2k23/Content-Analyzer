@@ -12,7 +12,7 @@ import ErrorMessage from "./components/ErrorMessage";
 import ScrollFloat from "./animations/ScrollFloat";
 import ElectricBorder from "./animations/ElectricBorder";
 
-const API_URL = "https://content-analyzer-xi10.onrender.com";
+const API_URL = import.meta.env.VITE_API_URL
 
 function App() {
   const [file, setFile] = useState(null);
