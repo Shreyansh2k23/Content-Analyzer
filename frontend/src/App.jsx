@@ -41,7 +41,7 @@ function App() {
     formData.append("file", file);
 
     try {
-      const response = axios.post(
+      const response = await axios.post(
   `${API_URL}/analyze`,
   formData,
         {
