@@ -9,7 +9,7 @@ import PyPDF2
 import pytesseract
 from PIL import Image
 import tempfile
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+# pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 from markupsafe import Markup
 import markdown
 # Load environment variables
