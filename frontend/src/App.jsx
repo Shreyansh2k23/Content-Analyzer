@@ -12,6 +12,8 @@ import ErrorMessage from "./components/ErrorMessage";
 import ScrollFloat from "./animations/ScrollFloat";
 import ElectricBorder from "./animations/ElectricBorder";
 
+const API_URL = "https://content-analyzer-xi10.onrender.com";
+
 function App() {
   const [file, setFile] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -39,9 +41,9 @@ function App() {
     formData.append("file", file);
 
     try {
-      const response = await axios.post(
-        "http://localhost:5000/analyze",
-        formData,
+      const response = axios.post(
+  `${API_URL}/analyze`,
+  formData,
         {
           headers: {
             "Content-Type": "multipart/form-data",

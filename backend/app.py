@@ -132,7 +132,8 @@ def analyze_content_with_gemini(text):
 @app.route('/')
 def index():
     """Serve the main page"""
-    return render_template('index.html')
+    # return render_template('index.html')
+    return "Social Media Content Analyzer is running."
 
 @app.route('/analyze', methods=['POST'])
 def analyze():
