@@ -24,6 +24,8 @@ COPY . .
 # Expose the port the app runs on
 EXPOSE 5000
 
-# Define the command to run your app using Gunicorn
-# This is the production-ready way to run a Flask app
-CMD ["gunicorn", "--bind", "0.0.0.0:5000", "app:app"]
+# Define the command to run your app using Gunicorn with optimized settings
+# --workers 1: Crucial for low-memory environments like Render's free tier.
+# --threads 2: Allows the single worker to handle a couple of requests concurrently.
+# --timeout 120: Increases the request timeout to 120 seconds to prevent killing slow OCR/AI tasks.
+CMD ["gunicorn", "--bind", "0.0.0.0:5000", "--workers", "1", "--threads", "2", "--timeout", "120", "app:app"]
