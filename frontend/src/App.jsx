@@ -104,7 +104,7 @@ function App() {
         <footer className="mt-6 text-center text-sm text-gray-500 animate-pulse">
           <p>
             Built with ❤️ by{" "}
-            <span className="font-bold text-primary">SNEHA PRAJAPATI</span>
+            <span className="font-bold text-primary">Shreyansh Gupta</span>
           </p>
         </footer>
       </div>
